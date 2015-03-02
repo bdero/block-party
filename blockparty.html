@@ -1,14 +1,21 @@
 <head>
-  <title>blockparty</title>
+  <title>Block Party</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  {{ > header }}
+  {{ > content }}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="header">
+  <header>
+    <h1>Block Party</h1>
+    <p>Click and drag in the field below to begin</p>
+  </header>
+</template>
+
+<template name="content">
+  <div class="field">
+    <!--child blocks spawn here-->
+  </div>
 </template>

@@ -12,18 +12,37 @@ if (Meteor.isClient) {
   });
 
   Template.content.events({
-    'mousedown': function(e) {
-      // Create the block
-      var field_position = $(".field").position();
-      var block = Blocks.insert({
-        x: e.pageX - field_position.left,
-        y: e.pageY - field_position.top,
-        width: 0,
-        height: 0,
-      });
+    "mousedown": function(e) {
+      if (!Session.get("editing")) {
+        // Create the block
+        var field_position = $(".field").position();
+        var block = Blocks.insert({
+          x: e.pageX - field_position.left,
+          y: e.pageY - field_position.top,
+          width: 0,
+          height: 0,
+        });
 
-      // Record the block we're currently editing
-      Session.set("editing", block);
+        // Record the block we're currently editing
+        Session.set("editing", block);
+      }
+    },
+    "mousemove": function(e) {
+      var editing = Session.get("editing");
+      if (editing) {
+        var field_position = $(".field").position();
+        var block = Blocks.findOne(editing);
+        var block_position = $("#" + editing).position();
+        Blocks.update(editing, {
+          $set: {
+            width: e.pageX - field_position.left - block.x,
+            height: e.pageY - field_position.top - block.y,
+          },
+        });
+      }
+    },
+    "mouseup": function(e) {
+      Session.set("editing", null);
     },
   });
 }

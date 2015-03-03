@@ -5,34 +5,34 @@ body {
 header {
   color: rgb(210, 210, 240);
   font-family: 'Indie Flower', cursive;
-  margin: 3em;
+  margin: 50px;
   position: relative;
   text-align: center;
 }
 
 h1 {
-  font-size: 5em;
-  margin-bottom: -0.21em;
-  padding-left: 0.1em;
+  font-size: 90px;
+  margin-bottom: -20px;
 }
 
 p {
-  font-size: 1.4em;
+  font-size: 23px;
+  padding-right: 30px;
 }
 
 .field {
   background-color: rgb(30, 30, 30);
-  border-radius: 1em;
-  height: 35em;
-  margin: 3em auto;
+  border-radius: 15px;
+  height: 650px;
+  margin: 50px auto;
   position: relative;
-  width: 45em;
+  width: 720px;
   z-index: 1;
 }
 
 .block {
-  border: 0.4em dashed rgb(210, 210, 210);
-  border-radius: 1em;
+  border: 6px dashed rgb(210, 210, 210);
+  border-radius: 10px;
   position: absolute;
   z-index: 2;
 }

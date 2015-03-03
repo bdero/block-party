@@ -7,6 +7,7 @@
 <body>
   {{ > header }}
   {{ > content }}
+  {{ > controls }}
 </body>
 
 <template name="header">
@@ -33,4 +34,8 @@
     width: {{ width }}px;
     height: {{ height }}px;"
   ></div>
+</template>
+
+<template name="controls">
+  <button class="clear">Clear</button>
 </template>

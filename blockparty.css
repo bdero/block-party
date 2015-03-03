@@ -24,7 +24,7 @@ p {
   background-color: rgb(30, 30, 30);
   border-radius: 15px;
   height: 650px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 170px auto;
   position: relative;
   width: 720px;
   z-index: 1;
@@ -35,4 +35,24 @@ p {
   border-radius: 10px;
   position: absolute;
   z-index: 2;
+}
+
+.clear {
+  background-color: rgba(30, 30, 30, 0.9);
+  border: none;
+  bottom: 0;
+  color: rgba(210, 210, 210, 0.5);
+  font-family: 'Indie Flower', cursive;
+  font-size: 60px;
+  height: 100px;
+  letter-spacing: 25px;
+  position: fixed;
+  transition: background-color 1s ease, color 1s ease;
+  width: 100%;
+  z-index: 3;
+}
+
+.clear:hover {
+  background-color: rgba(210, 210, 210, 0.5);
+  color: rgba(30, 30, 30, 0.9);
 }

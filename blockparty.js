@@ -45,10 +45,21 @@ if (Meteor.isClient) {
       Session.set("editing", null);
     },
   });
+  Template.controls.events({
+    "click button": function(e) {
+      Meteor.call("clearAllBlocks");
+    },
+  });
 }
 
 if (Meteor.isServer) {
   Meteor.publish("blocks", function() {
     return Blocks.find({});
+  });
+
+  Meteor.methods({
+    clearAllBlocks: function() {
+      Blocks.remove({});
+    },
   });
 }

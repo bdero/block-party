@@ -21,6 +21,12 @@ if (Meteor.isClient) {
           y: e.pageY - field_position.top,
           width: 0,
           height: 0,
+          color: [
+            Math.floor(Math.random()*150) + 50, // Red
+            Math.floor(Math.random()*150) + 50, // Green
+            Math.floor(Math.random()*150) + 50, // Blue
+            Math.random()/5.0 + 0.4, // Alpha
+          ],
         });
 
         // Record the block we're currently editing
@@ -46,7 +52,7 @@ if (Meteor.isClient) {
     },
   });
   Template.controls.events({
-    "click button": function(e) {
+    "click .clear": function(e) {
       Meteor.call("clearAllBlocks");
     },
   });

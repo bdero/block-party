@@ -19,5 +19,18 @@
 <template name="content">
   <div class="field">
     <!--child blocks spawn here-->
+    {{ #each blocks }}
+      {{ > block }}
+    {{ /each }}
   </div>
+</template>
+
+
+<template name="block">
+  <div class="block" style="
+    left: {{ x }}em;
+    top: {{ y }}em;
+    width: {{ width }}em;
+    height: {{ height }}em;"
+  ></div>
 </template>

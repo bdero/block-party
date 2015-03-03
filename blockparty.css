@@ -25,5 +25,14 @@ p {
   border-radius: 1em;
   height: 35em;
   margin: 3em auto;
+  position: relative;
   width: 45em;
+  z-index: 1;
+}
+
+.block {
+  border: 0.4em dashed rgb(210, 210, 210);
+  border-radius: 1em;
+  position: absolute;
+  z-index: 2;
 }

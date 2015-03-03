@@ -1,7 +1,7 @@
-Block Party!
-============
+[Block Party!](http://block-party.meteor.com/)
+==============================================
 
-![Screenshot](http://i.imgur.com/wHic8Go.png)
+[![Screenshot](http://i.imgur.com/wHic8Go.png)](http://block-party.meteor.com/)
 
 A simple [Meteor](https://meteor.com) prototype for a multi-user drawing
 application.
